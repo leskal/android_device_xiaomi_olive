@@ -22,13 +22,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from olive device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PixelExperience stuff.
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_GAPPS_ARCH := arm64
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-PRODUCT_BRAND := xiaomi
+PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := olive
-PRODUCT_MANUFACTURER := xiaomi
-PRODUCT_NAME := lineage_olive
+PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_NAME := aosp_olive
 PRODUCT_MODEL := Redmi 8
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
